@@ -53,7 +53,26 @@
 
 <body>
 
+<div class="container">
+    <h2>Lista de sedes</h2>
+    <table class="table table-sm">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Direecion</th>
+            <th>Telefono</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr th:each="shipper, info : ${sedeLista}">
+            <td th:text="${info.index + 1}"></td>
+            <td th:text="${sedeLista.nombre}"></td>
+            <td th:text="${sedeLista.direccion}"></td>
+            <td th:text="${sedeLista.telefono}"></td>
 
+        </tr>
+    </table>
+</div>
 
 
 
